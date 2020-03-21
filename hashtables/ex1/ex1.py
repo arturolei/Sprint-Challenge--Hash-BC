@@ -9,12 +9,20 @@ from hashtables import (HashTable,
 def get_indices_of_item_weights(weights, length, limit):
     ht = HashTable(16)
 
-    """
-    YOUR CODE HERE
-    """
+    for i in range(length):
+        # Find match based on current index locations value
+        difference = limit - weights[i]
+
+        # Get the current value from hashtable
+        match = hash_table_retrieve(ht, difference)
+        if match is not None:
+            # If match found return with current index first
+            return [i, match]
+
+        #  If there is no match, build the hashtable 
+        hash_table_insert(ht, weights[i], i)
 
     return None
-
 
 def print_answer(answer):
     if answer is not None:
