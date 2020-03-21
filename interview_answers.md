@@ -16,7 +16,15 @@ The worst case is O(n) as you need to effectively to replicate the original arra
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
 ANSWER:
 
-The blocks each contain a 
+A blockchain is a structure that contains records of numerous transactions, a chain is made up of blocks. Each block has the following components:
+
+Index - the number of the block in the chain, starting at 0 or 1, depending on the chain.
+Timestamp - the time at which the block was created. This is not required, but is often useful.
+Transactions - the monetary transactions, or any type of data, that is proofed by the block.
+Proof - the proof for this block. Proof that work has been done.
+Previous Hash - the hash of the previous block.
  
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
 ANSWER:
+
+Proof of Work is an arbitrarily difficult problem to solve. It essentially adds friction and prevents people from easily altering past transactions in the chain, as that altering past transactions in the chain would also require re-doing/regenerating valid Proofs of Work.
